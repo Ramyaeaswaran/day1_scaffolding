@@ -8,8 +8,20 @@ class Student {
 }
 
 void main() {
-  String msg = 'Hello World';
-  Text textWidget = Text(msg);
-  MaterialApp myApp = MaterialApp(home: textWidget);
-  runApp(myApp);
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.lightGreen,
+        appBar: AppBar(
+          title: Text('Heloooo'),
+          backgroundColor: Colors.yellow,
+        ),
+        body: Center(
+          child: Image(
+              image: NetworkImage(
+                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg')),
+        ),
+      ),
+    ),
+  );
 }
